@@ -99,7 +99,7 @@ const Waitlist = () => {
         throw new Error(response.data.error || "Failed to submit");
       }
     } catch (err: unknown) {
-      console.error("Error submitting to waitlist:", err);
+      console.error("Error submitting to waitlist:", err, error);
 
       if (axios.isAxiosError(err)) {
         const errorMessage =
